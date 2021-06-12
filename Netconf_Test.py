@@ -8,6 +8,7 @@ m = manager.connect(
     hostkey_verify=False
     )
 
-print("#Supported Capabilities (YANG models):")
-for capability in m.server_capabilities:
-    print(capability)
+#test Rev02
+
+netconf_reply = m.get_config(source="running")
+print(netconf_reply)
